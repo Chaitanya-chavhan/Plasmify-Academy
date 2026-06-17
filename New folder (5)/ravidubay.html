@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INORGANIC CHEMISTRY | 𝐏𝐥𝐚𝐬𝐦𝐢𝐟𝐲 𝐀𝐜𝐚𝐝𝐞𝐦𝐲</title>
+    <meta name="description" content="Ravi Dubey Sir Inorganic Chemistry Lectures for NEET UG">
+    <meta property="og:title" content="INORGANIC CHEMISTRY | 𝐏𝐥𝐚𝐬𝐦𝐢𝐟𝐲 𝐀𝐜𝐚𝐝𝐞𝐦𝐲">
+    <meta property="og:description" content="Collection of Ravi Dubey Sir Inorganic Chemistry Lectures for NEET UG">
+    <meta property="og:image" content="https://iili.io/CoPiYE7.jpg">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-main: #0d1117;
+            --bg-card: #161b22;
+            --bg-card2: #1c2230;
+            --text-dark: #e6edf3;
+            --text-muted: #8b949e;
+            --accent: #10b981;
+            --accent-dim: rgba(16,185,129,0.15);
+            --border: rgba(255,255,255,0.08);
+            --radius-lg: 18px;
+            --radius-pill: 99px;
+            --shadow: 0 4px 24px rgba(0,0,0,0.4);
+            --transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            background: var(--bg-main);
+            color: var(--text-dark);
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        a { text-decoration: none; color: inherit; }
+        button { cursor: pointer; border: none; outline: none; background: none; font-family: inherit; }
+        button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+        /* ── Layout ── */
+        .app-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1.5rem 1rem 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        /* ── Header ── */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--bg-card);
+            padding: 0.9rem 1.5rem;
+            border-radius: var(--radius-pill);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+        .brand-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #10b981, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.3px;
+        }
+        .telegram-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 0.55rem 1.1rem;
+            border-radius: var(--radius-pill);
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: var(--transition);
+            box-shadow: 0 2px 12px rgba(16,185,129,0.3);
+        }
+        .telegram-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(16,185,129,0.4); }
+        .telegram-btn svg { width:16px; height:16px; fill:white; }
+
+        /* ── Profile ── */
+        .profile-card {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.75rem 2rem;
+            border-radius: var(--radius-lg);
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        .profile-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #10b981, #34d399, #6ee7b7);
+        }
+        .profile-img {
+            width: 90px; height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            flex-shrink: 0;
+        }
+        .profile-info h1 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin-bottom: 0.3rem;
+            letter-spacing: -0.4px;
+        }
+        .profile-info p { color: var(--text-muted); font-size: 0.95rem; }
+        .profile-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            background: var(--accent-dim);
+            color: var(--accent);
+            border: 1px solid rgba(16,185,129,0.3);
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-pill);
+            font-size: 0.78rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        /* ── Search ── */
+        .search-wrapper { position: relative; }
+        .search-input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 2.75rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-pill);
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+        .search-input::placeholder { color: var(--text-muted); }
+        .search-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(16,185,129,0.15); }
+        .search-icon {
+            position: absolute;
+            left: 0.9rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            pointer-events: none;
+        }
+        .search-icon svg { width:18px; height:18px; fill:currentColor; }
+
+        /* ── Chapter Nav ── */
+        /* ── Chapter Nav ── */
+        .chapter-nav-wrapper {
+            position: relative;
+            width: 100%;
+        }
+        .chapter-nav-wrapper::before,
+        .chapter-nav-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 40px;
+            pointer-events: none;
+            z-index: 3;
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+        .chapter-nav-wrapper::before {
+            left: 0;
+            background: linear-gradient(90deg, var(--bg-main), transparent);
+        }
+        .chapter-nav-wrapper::after {
+            right: 0;
+            background: linear-gradient(-90deg, var(--bg-main), transparent);
+        }
+        .chapter-nav-wrapper.can-scroll-left::before {
+            opacity: 1;
+        }
+        .chapter-nav-wrapper.can-scroll-right::after {
+            opacity: 1;
+        }
+        .chapter-nav {
+            position: relative;
+            display: flex;
+            gap: 0.6rem;
+            overflow-x: auto;
+            padding: 0.35rem 0.25rem 0.6rem;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+        }
+        .chapter-nav::-webkit-scrollbar { display: none; }
+        .nav-indicator {
+            position: absolute;
+            top: 0.35rem;
+            left: 0;
+            height: calc(100% - 0.95rem);
+            background: var(--accent);
+            border-radius: var(--radius-pill);
+            box-shadow: 0 0 16px rgba(16,185,129,0.35);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1;
+            pointer-events: none;
+        }
+        .chapter-btn {
+            position: relative;
+            z-index: 2;
+            padding: 0.6rem 1.25rem;
+            border-radius: var(--radius-pill);
+            background: transparent;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.85rem;
+            border: 1px solid var(--border);
+            white-space: nowrap;
+            transition: color 0.3s ease, border-color 0.3s ease;
+            flex-shrink: 0;
+        }
+        .chapter-btn.active {
+            color: white;
+            border-color: transparent;
+        }
+        .chapter-btn:hover:not(.active) { border-color: var(--accent); color: var(--accent); }
+
+        /* ── Section Header ── */
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 0.25rem;
+        }
+        .section-title { font-weight: 700; font-size: 1rem; color: var(--text-dark); }
+        .lecture-count {
+            background: var(--accent-dim);
+            color: var(--accent);
+            border: 1px solid rgba(16,185,129,0.25);
+            padding: 0.2rem 0.6rem;
+            border-radius: var(--radius-pill);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* ── Lecture Grid ── */
+        .lecture-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 0.75rem;
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .lecture-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            padding: 1rem 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.75rem;
+            transition: var(--transition);
+            border: 1px solid var(--border);
+            text-align: left;
+            width: 100%;
+            animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+        .lecture-card:hover { transform: translateY(-3px); border-color: var(--accent); background: var(--bg-card2); box-shadow: 0 8px 24px rgba(16,185,129,0.12); }
+        .lecture-card.active-lecture { border-color: var(--accent); background: var(--accent-dim); }
+        .lecture-left { display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 0; }
+        .lecture-num {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--accent);
+            background: var(--accent-dim);
+            width: 28px; height: 28px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .lecture-title {
+            font-size: 0.88rem;
+            font-weight: 600;
+            line-height: 1.4;
+            color: var(--text-dark);
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .play-btn {
+            width: 40px; height: 40px;
+            border-radius: 50%;
+            background: var(--bg-main);
+            border: 1px solid var(--border);
+            display: flex; justify-content: center; align-items: center;
+            color: var(--text-muted);
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+        .lecture-card:hover .play-btn { background: var(--accent); color: white; border-color: var(--accent); transform: scale(1.1); }
+        .play-btn svg { width: 16px; height: 16px; fill: currentColor; margin-left: 2px; }
+
+        /* ── No Results ── */
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--text-muted);
+        }
+
+        /* ── Modal ── */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            opacity: 0;
+            pointer-events: none;
+            backdrop-filter: blur(0px);
+            transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), backdrop-filter 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .modal-overlay.open {
+            background: rgba(0,0,0,0.92);
+            opacity: 1;
+            pointer-events: auto;
+            backdrop-filter: blur(8px);
+        }
+        .modal-inner {
+            width: 100%;
+            max-width: 960px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+            transform: translateY(30px) scale(0.97);
+            opacity: 0;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .modal-overlay.open .modal-inner {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+        .modal-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .modal-info { flex: 1; }
+        .modal-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent);
+            margin-bottom: 0.25rem;
+        }
+        .modal-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.4;
+        }
+        .modal-close {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            width: 38px; height: 38px;
+            border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            font-size: 1.3rem;
+            transition: var(--transition);
+            flex-shrink: 0;
+            border: 1px solid rgba(255,255,255,0.15);
+        }
+        .modal-close:hover { background: #ef4444; border-color: #ef4444; transform: scale(1.1); }
+
+        /* ── Native Video Player (no YouTube branding — WebM) ── */
+        .video-container {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: #000;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid rgba(16,185,129,0.3);
+            box-shadow: 0 0 60px rgba(16,185,129,0.15);
+            position: relative;
+        }
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            display: block;
+            background: #000;
+        }
+        /* Style the native video controls bar */
+        .video-container video::-webkit-media-controls-panel {
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+        }
+        .video-loader {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            z-index: 2;
+            gap: 1rem;
+        }
+        .video-loader p { color: var(--text-muted); font-size: 0.85rem; }
+        .spinner {
+            width: 40px; height: 40px;
+            border: 3px solid rgba(16,185,129,0.3);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* ── Modal Nav ── */
+        .modal-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+        }
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-dark);
+            padding: 0.6rem 1.1rem;
+            border-radius: var(--radius-pill);
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .nav-btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+        .nav-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+        .nav-btn svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .nav-counter { font-size: 0.82rem; color: var(--text-muted); font-weight: 500; }
+
+        /* ── Footer ── */
+        .footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+            margin-top: 1rem;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .app-container { padding: 1rem 0.75rem 2.5rem; gap: 1rem; }
+            .header { padding: 0.75rem 1rem; }
+            .brand-title { font-size: 1.1rem; }
+            .telegram-btn { padding: 0.5rem 0.9rem; font-size: 0.82rem; }
+            .profile-card { flex-direction: column; text-align: center; padding: 1.25rem 1rem; gap: 1rem; }
+            .profile-img { width: 75px; height: 75px; }
+            .profile-info h1 { font-size: 1.35rem; }
+            .lecture-grid { grid-template-columns: 1fr; gap: 0.6rem; }
+            .modal-inner { padding: 0; }
+            .modal-title { font-size: 0.95rem; }
+            .nav-btn span { display: none; }
+        }
+        @media (max-width: 480px) {
+            .profile-info h1 { font-size: 1.2rem; }
+            .chapter-btn { padding: 0.5rem 1rem; font-size: 0.8rem; }
+        }
+        @media (min-width: 1024px) {
+            .lecture-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <main class="app-container">
+        <header class="header">
+            <div class="brand-title">𝐏𝐥𝐚𝐬𝐦𝐢𝐟𝐲 𝐀𝐜𝐚𝐝𝐞𝐦𝐲</div>
+            <a href="https://t.me/Plasmify_Academy" target="_blank" rel="noopener" class="telegram-btn" aria-label="Join our Telegram channel">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.96 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                <span>Join Telegram</span>
+            </a>
+        </header>
+
+        <section class="profile-card">
+            <img src="https://iili.io/CoPiYE7.jpg" alt="Ravi Dubey Sir" class="profile-img">
+            <div class="profile-info">
+                <h1>Ravi Dubey Sir</h1>
+                <p>Complete Inorganic Chemistry • NEET UG Preparation</p>
+                <div class="profile-badge">
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    Ad-Free · High Quality · No Branding
+                </div>
+            </div>
+        </section>
+
+        <div class="search-wrapper">
+            <div class="search-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            </div>
+            <input type="search" id="search-input" class="search-input" placeholder="Search lectures…" aria-label="Search lectures">
+        </div>
+
+        <div class="chapter-nav-wrapper">
+            <nav class="chapter-nav" id="chapter-nav" role="tablist" aria-label="Chapter navigation"></nav>
+        </div>
+
+        <div class="section-header">
+            <div class="section-title" id="section-title">Lectures</div>
+            <div class="lecture-count" id="lecture-count">0</div>
+        </div>
+
+        <div class="lecture-grid" id="lecture-grid" role="list"></div>
+
+        <footer class="footer">
+            <p>&copy; 2026 𝐏𝐥𝐚𝐬𝐦𝐢𝐟𝐲 𝐀𝐜𝐚𝐝𝐞𝐦𝐲. All Rights Reserved.</p>
+        </footer>
+    </main>
+
+    <!-- Clean Native Video Player — No YouTube branding (WebM sources) -->
+    <div class="modal-overlay" id="video-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" tabindex="-1">
+        <div class="modal-inner">
+            <div class="modal-top">
+                <div class="modal-info">
+                    <div class="modal-label">Now Playing</div>
+                    <div class="modal-title" id="modal-title">Lecture Title</div>
+                </div>
+                <button class="modal-close" onclick="closeVideo()" aria-label="Close video player">&#10005;</button>
+            </div>
+            <div class="video-container" id="video-container">
+                <div class="video-loader" id="video-loader">
+                    <div class="spinner"></div>
+                    <p>Loading lecture…</p>
+                </div>
+            </div>
+            <div class="modal-nav">
+                <button class="nav-btn" id="prev-btn" onclick="navigateLecture(-1)" aria-label="Previous lecture">
+                    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+                    <span>Previous</span>
+                </button>
+                <span class="nav-counter" id="nav-counter">1 / 1</span>
+                <button class="nav-btn" id="next-btn" onclick="navigateLecture(1)" aria-label="Next lecture">
+                    <span>Next</span>
+                    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const teacherData = [
+            { "chapter": "PERIODIC TABLE", "lectures": [ { "title": "1. PERIODIC TABLE - 1", "url": "https://uamedia.uacdn.net/lesson-raw/CWEQW86FOTFPNQJTA6IO/output.webm" }, { "title": "2. PERIODIC TABLE - 2", "url": "https://uamedia.uacdn.net/lesson-raw/PV7ZBG3FC831IHM6G0UL/output.webm" }, { "title": "3. PERIODIC TABLE - 3", "url": "https://uamedia.uacdn.net/lesson-raw/2T5AV82II5H506J9IIXO/output.webm" }, { "title": "4. PERIODIC TABLE - 4", "url": "https://uamedia.uacdn.net/lesson-raw/SSF6TACX5DW2YDXWXYIV/output.webm" }, { "title": "5. PERIODIC TABLE - 5", "url": "https://uamedia.uacdn.net/lesson-raw/6PYPKC0H9E9AF9ZIV3OA/output.webm" }, { "title": "6. PERIODIC TABLE - 6", "url": "https://uamedia.uacdn.net/lesson-raw/OB49TMIW39VAH0NENSJE/output.webm" }, { "title": "7. PERIODIC TABLE - 7", "url": "https://uamedia.uacdn.net/lesson-raw/GO1WO9837SFBVFSJBW2W/output.webm" }, { "title": "8. PERIODIC TABLE - 8", "url": "https://uamedia.uacdn.net/lesson-raw/98F3IB3A08NBEERGMOLX/output.webm" }, { "title": "9. PERIODIC TABLE - 9", "url": "https://uamedia.uacdn.net/lesson-raw/FIXLQA0VPB5UEP0NYI08/output.webm" }, { "title": "10. PERIODIC TABLE - 10", "url": "https://uamedia.uacdn.net/lesson-raw/PM841113IHIHVI2J6JBI/output.webm" }, { "title": "11. PERIODIC TABLE - 11", "url": "https://uamedia.uacdn.net/lesson-raw/5E7UDJ30OZVXZQFT0PBT/output.webm" }, { "title": "12. PERIODIC TABLE - 12", "url": "https://uamedia.uacdn.net/lesson-raw/PJOFVN9XJ6BVXS74A4MU/output.webm" }, { "title": "13. PERIODIC TABLE - 13", "url": "https://uamedia.uacdn.net/lesson-raw/6NMBL81JJHY3WIZ4X8JO/output.webm" }, { "title": "14. PERIODIC TABLE - 14", "url": "https://uamedia.uacdn.net/lesson-raw/FNACTLF92UYPNDFEXSO1/output.webm" }, { "title": "15. PERIODIC TABLE - 15", "url": "https://uamedia.uacdn.net/lesson-raw/7IRYLK0FHNF3VWBXME32/output.webm" }, { "title": "16. PERIODIC TABLE - 16", "url": "https://uamedia.uacdn.net/lesson-raw/I23WKKSCT4QZ23LQTYGA/output.webm" }, { "title": "17. PERIODIC TABLE - 17", "url": "https://uamedia.uacdn.net/lesson-raw/OD9IIKF5STTS877QLCWN/output.webm" }, { "title": "18. PERIODIC TABLE - 18", "url": "https://uamedia.uacdn.net/lesson-raw/RW53S15NUEK11G164DGV/output.webm" }, { "title": "19. PERIODIC TABLE - 19", "url": "https://uamedia.uacdn.net/lesson-raw/KG4SEFPHQDSI48MMSA99/output.webm" }, { "title": "20. PERIODIC TABLE - 20", "url": "https://uamedia.uacdn.net/lesson-raw/13H6QKL8V23NN3FLNEU1/output.webm" }, { "title": "21. PERIODIC TABLE - 21", "url": "https://uamedia.uacdn.net/lesson-raw/I500ZCMUY28MJ9WC2VCQ/output.webm" } ] },
+            { "chapter": "CHEMICAL BONDING", "lectures": [ { "title": "1. CHEMICAL BONDING - 1", "url": "https://uamedia.uacdn.net/lesson-raw/MFZCR4SVZ9SBQKQFAE0Z/output.webm" }, { "title": "2. CHEMICAL BONDING - 2", "url": "https://uamedia.uacdn.net/lesson-raw/XMATVVS4JSSPW6WKQS3Y/output.webm" }, { "title": "3. CHEMICAL BONDING - 3", "url": "https://uamedia.uacdn.net/lesson-raw/ZIYOSHO8YFATB5RW9G8V/output.webm" }, { "title": "4. CHEMICAL BONDING - 4", "url": "https://uamedia.uacdn.net/lesson-raw/JFSFYGZI8V5NV98OTWCW/output.webm" }, { "title": "5. CHEMICAL BONDING - 5", "url": "https://uamedia.uacdn.net/lesson-raw/G2HSJXL4OEXE227I0MT2/output.webm" }, { "title": "6. CHEMICAL BONDING - 6", "url": "https://uamedia.uacdn.net/lesson-raw/ZTPV1LME76XRW8UNWE1O/output.webm" }, { "title": "7. CHEMICAL BONDING - 7", "url": "https://uamedia.uacdn.net/lesson-raw/WKUK03CVLMY2G9P67MY4/output.webm" }, { "title": "8. CHEMICAL BONDING - 8", "url": "https://uamedia.uacdn.net/lesson-raw/WXKZZDCJS9QUOTMY4GEG/output.webm" }, { "title": "9. CHEMICAL BONDING - 9", "url": "https://uamedia.uacdn.net/lesson-raw/SBFRQ52J1WCDN1JVQHKS/output.webm" }, { "title": "10. CHEMICAL BONDING - 10", "url": "https://uamedia.uacdn.net/lesson-raw/7ANY414JN4OBTFLHWHZQ/output.webm" }, { "title": "11. CHEMICAL BONDING - 11", "url": "https://uamedia.uacdn.net/lesson-raw/XKDJI60O4GZW9F41893H/output.webm" }, { "title": "12. CHEMICAL BONDING - 12", "url": "https://uamedia.uacdn.net/lesson-raw/RX2ON3FYKG17NHAPMTDD/output.webm" }, { "title": "13. CHEMICAL BONDING - 13", "url": "https://uamedia.uacdn.net/lesson-raw/COQ0CDN1C9PNRLTN0ACP/output.webm" }, { "title": "14. CHEMICAL BONDING - 14", "url": "https://uamedia.uacdn.net/lesson-raw/Z8XJJ2X656PH49DWLBSM/output.webm" }, { "title": "15. CHEMICAL BONDING - 15", "url": "https://uamedia.uacdn.net/lesson-raw/JR81LWOVAO9X84CTWP2F/output.webm" }, { "title": "16. CHEMICAL BONDING - 16", "url": "https://uamedia.uacdn.net/lesson-raw/LEO1AR6SWW8IX59GJVLF/output.webm" }, { "title": "18. CHEMICAL BONDING - 18", "url": "https://uamedia.uacdn.net/lesson-raw/7X3DHAJ45KI921QBNYEH/output.webm" }, { "title": "19. CHEMICAL BONDING - 19", "url": "https://uamedia.uacdn.net/lesson-raw/0VKG24XKMZ96HL772Y4I/output.webm" }, { "title": "21. CHEMICAL BONDING - 21", "url": "https://uamedia.uacdn.net/lesson-raw/3XL885ZIMN9205352N16/output.webm" }, { "title": "22. CHEMICAL BONDING - 22", "url": "https://uamedia.uacdn.net/lesson-raw/X27A8REY8K9M2V2VTOKY/output.webm" }, { "title": "23. CHEMICAL BONDING - 23", "url": "https://uamedia.uacdn.net/lesson-raw/LH7BMO3U57XBG6I3AK0R/output.webm" }, { "title": "24. CHEMICAL BONDING - 24", "url": "https://uamedia.uacdn.net/lesson-raw/UK6OGDHEODDKWLQ7ADOO/output.webm" }, { "title": "25. CHEMICAL BONDING - 25", "url": "https://uamedia.uacdn.net/lesson-raw/E5D8GPF45WRG52RVOC5I/output.webm" }, { "title": "27. CHEMICAL BONDING - 27", "url": "https://uamedia.uacdn.net/lesson-raw/NY99HZTYYDX2J1GPYW1T/output.webm" }, { "title": "28. CHEMICAL BONDING - 28", "url": "https://uamedia.uacdn.net/lesson-raw/0NGNUNNVIUURUF5L1D0R/output.webm" }, { "title": "29. CHEMICAL BONDING - 29", "url": "https://uamedia.uacdn.net/lesson-raw/MPSVHCOWZ8RHPU615NLG/output.webm" }, { "title": "30. CHEMICAL BONDING - 30", "url": "https://uamedia.uacdn.net/lesson-raw/QRA7M3LQ7MBJQIJ8IVXG/output.webm" }, { "title": "31. CHEMICAL BONDING - 31", "url": "https://uamedia.uacdn.net/lesson-raw/HTTEZAFEIM6TLAZERH7E/output.webm" }, { "title": "32. CHEMICAL BONDING - 32", "url": "https://uamedia.uacdn.net/lesson-raw/VBX8EHWUQPLBRXKWHHBN/output.webm" }, { "title": "33. CHEMICAL BONDING - 33", "url": "https://uamedia.uacdn.net/lesson-raw/TSEIB1HA1XB98O84LTUT/output.webm" } ] },
+            { "chapter": "P BLOCK", "lectures": [ { "title": "56. P BLOCK - 1", "url": "https://uamedia.uacdn.net/lesson-raw/J34U7Y7T01CYHC62LP80/output.webm" }, { "title": "57. P BLOCK - 2", "url": "https://uamedia.uacdn.net/lesson-raw/N8HUWTM5W1U895490VSB/output.webm" }, { "title": "58. P BLOCK - 3", "url": "https://uamedia.uacdn.net/lesson-raw/7C8ZAJL567XCOL5GM0HR/output.webm" }, { "title": "59. P BLOCK - 4", "url": "https://uamedia.uacdn.net/lesson-raw/6GRCYGWPBU6H2L8O0GMF/output.webm" }, { "title": "60. P BLOCK - 5", "url": "https://uamedia.uacdn.net/lesson-raw/HSH0YUPC9KRT5WJ93G6U/output.webm" }, { "title": "61. P BLOCK - 6", "url": "https://uamedia.uacdn.net/lesson-raw/42JG8E4ZRVHLDWIJQ6UL/output.webm" }, { "title": "63. P BLOCK - 7", "url": "https://uamedia.uacdn.net/lesson-raw/FFVQGCWJM390NQ0T81I1/output.webm" }, { "title": "64. P BLOCK - 8", "url": "https://uamedia.uacdn.net/lesson-raw/RSYRZCBL79HAPTZ4EZYP/output.webm" }, { "title": "65. P BLOCK - 9", "url": "https://uamedia.uacdn.net/lesson-raw/FG7RFMGZBSRKWKGA63I0/output.webm" }, { "title": "66. P BLOCK - 10", "url": "https://uamedia.uacdn.net/lesson-raw/VR1F87PO6B3N64NS8XE8/output.webm" }, { "title": "67. P BLOCK - 11", "url": "https://uamedia.uacdn.net/lesson-raw/L3UTITXNZERNNTBJ5AYV/output.webm" }, { "title": "68. P BLOCK - 12", "url": "https://uamedia.uacdn.net/lesson-raw/KYOB3NGXG8UIMB3XAD1H/output.webm" }, { "title": "69. P BLOCK - 13", "url": "https://uamedia.uacdn.net/lesson-raw/PGKIVRZ8TTQH4MNLB6JA/output.webm" }, { "title": "70. P BLOCK - 14", "url": "https://uamedia.uacdn.net/lesson-raw/C4RSSMW3DPX5897KZTOG/output.webm" } ] },
+            { "chapter": "COORDINATION COMPOUNDS", "lectures": [ { "title": "1. COORDINATION COMPOUNDS - 1", "url": "https://uamedia.uacdn.net/lesson-raw/TTTBEVK0XVPYA3E55CIZ/output.webm" }, { "title": "2. COORDINATION COMPOUNDS - 2", "url": "https://uamedia.uacdn.net/lesson-raw/5A74M79YNSNJ7KQ0XB6I/output.webm" }, { "title": "3. COORDINATION COMPOUNDS - 3", "url": "https://uamedia.uacdn.net/lesson-raw/Q23SUFFKBIENVG3RTAYA/output.webm" }, { "title": "4. COORDINATION COMPOUNDS - 4", "url": "https://uamedia.uacdn.net/lesson-raw/8TZ53N24XEJLZB8KYAJA/output.webm" }, { "title": "5. COORDINATION COMPOUNDS - 5", "url": "https://uamedia.uacdn.net/lesson-raw/5P3QTKM7P3IMEL1T87LO/output.webm" }, { "title": "6. COORDINATION COMPOUNDS - 6", "url": "https://uamedia.uacdn.net/lesson-raw/NPV3GHXTVR4UU50AGR8K/output.webm" }, { "title": "7. COORDINATION COMPOUNDS - 7", "url": "https://uamedia.uacdn.net/lesson-raw/C3AW3EQX80NFI5GB80R8/output.webm" }, { "title": "8. COORDINATION COMPOUNDS - 8", "url": "https://uamedia.uacdn.net/lesson-raw/5J9S8VIUULYTEZ80GXXA/output.webm" }, { "title": "9. COORDINATION COMPOUNDS - 9", "url": "https://uamedia.uacdn.net/lesson-raw/FT3MKTI3RCOKKMD5RHLP/output.webm" }, { "title": "10. COORDINATION COMPOUNDS - 10", "url": "https://uamedia.uacdn.net/lesson-raw/2DGM9PRC3P1LKJV5AQJS/output.webm" }, { "title": "11. COORDINATION COMPOUNDS - 11", "url": "https://uamedia.uacdn.net/lesson-raw/GF1I20KOWUNCSZF6M34L/output.webm" }, { "title": "13. COORDINATION COMPOUNDS - 13", "url": "https://uamedia.uacdn.net/lesson-raw/1E3BKC30CQWI4UBVMQRS/output.webm" }, { "title": "14. COORDINATION COMPOUNDS - 14", "url": "https://uamedia.uacdn.net/lesson-raw/P59I98NAULES4NY1T3TU/output.webm" }, { "title": "15. COORDINATION COMPOUNDS - 15", "url": "https://uamedia.uacdn.net/lesson-raw/K25UH3OBQHST9QIVQHZJ/output.webm" } ] },
+            { "chapter": "D AND F BLOCK", "lectures": [ { "title": "1. D AND F BLOCK ELEMENTS - 1", "url": "https://uamedia.uacdn.net/lesson-raw/68ZIJAO4VTWDHKQJD6RB/output.webm" }, { "title": "2. D AND F BLOCK ELEMENTS - 2", "url": "https://uamedia.uacdn.net/lesson-raw/EFWL563TU1A0D7MUJYVI/output.webm" }, { "title": "3. D AND F BLOCK ELEMENTS - 3", "url": "https://uamedia.uacdn.net/lesson-raw/W6HSF5VIX54HZH0OER45/output.webm" }, { "title": "4. D AND F BLOCK ELEMENTS - 4", "url": "https://uamedia.uacdn.net/lesson-raw/SOLGIYX20FWOU2D6EXQ0/output.webm" }, { "title": "5. D AND F BLOCK ELEMENTS - 5", "url": "https://uamedia.uacdn.net/lesson-raw/VKSWJSWH0OEMGTV6VZ2Q/output.webm" }, { "title": "6. D AND F BLOCK ELEMENTS - 6", "url": "https://uamedia.uacdn.net/lesson-raw/LP4OH4TPPJKZUNKLPUSM/output.webm" }, { "title": "7. D AND F BLOCK ELEMENTS - 7", "url": "https://uamedia.uacdn.net/lesson-raw/9GSN70JUF3HX78373XBV/output.webm" } ] }
+        ];
+
+        let currentChapterIndex = 0;
+        let currentLectureIndex = -1;
+        let searchQuery = '';
+
+        function getFilteredLectures() {
+            const lectures = teacherData[currentChapterIndex].lectures;
+            if (!searchQuery) return lectures;
+            return lectures.filter(l => l.title.toLowerCase().includes(searchQuery.toLowerCase()));
+        }
+
+        function updateIndicator() {
+            const activeBtn = document.querySelector('.chapter-btn.active');
+            const indicator = document.getElementById('nav-indicator');
+            if (activeBtn && indicator) {
+                indicator.style.left = `${activeBtn.offsetLeft}px`;
+                indicator.style.width = `${activeBtn.offsetWidth}px`;
+                indicator.style.height = `${activeBtn.offsetHeight}px`;
+                indicator.style.top = `${activeBtn.offsetTop}px`;
+            }
+        }
+
+        function updateScrollIndicators() {
+            const nav = document.getElementById('chapter-nav');
+            const wrapper = nav.parentElement;
+            if (!nav || !wrapper) return;
+            
+            const scrollLeft = nav.scrollLeft;
+            const maxScroll = nav.scrollWidth - nav.clientWidth;
+            
+            if (scrollLeft > 5) {
+                wrapper.classList.add('can-scroll-left');
+            } else {
+                wrapper.classList.remove('can-scroll-left');
+            }
+            
+            if (scrollLeft < maxScroll - 5) {
+                wrapper.classList.add('can-scroll-right');
+            } else {
+                wrapper.classList.remove('can-scroll-right');
+            }
+        }
+
+        function renderApp() {
+            // Render chapter nav buttons once
+            const nav = document.getElementById('chapter-nav');
+            nav.innerHTML = `
+                <div class="nav-indicator" id="nav-indicator"></div>
+                ${teacherData.map((chap, i) => `
+                    <button class="chapter-btn ${i === currentChapterIndex ? 'active' : ''}"
+                        role="tab" aria-selected="${i === currentChapterIndex}"
+                        onclick="setChapter(${i})">${chap.chapter}</button>
+                `).join('')}
+            `;
+            
+            renderGrid();
+            
+            setTimeout(() => {
+                updateIndicator();
+                updateScrollIndicators();
+            }, 50);
+        }
+
+        function renderGrid() {
+            const lectures = getFilteredLectures();
+            const grid = document.getElementById('lecture-grid');
+            document.getElementById('section-title').textContent = teacherData[currentChapterIndex].chapter;
+            document.getElementById('lecture-count').textContent = `${lectures.length} Lecture${lectures.length !== 1 ? 's' : ''}`;
+
+            if (lectures.length === 0) {
+                grid.innerHTML = `<div class="no-results" role="status">
+                    <p style="color:var(--text-muted)">No lectures found for "<strong>${searchQuery}</strong>"</p>
+                </div>`;
+                return;
+            }
+
+            grid.innerHTML = lectures.map((lec, i) => {
+                const origIndex = teacherData[currentChapterIndex].lectures.indexOf(lec);
+                const num = origIndex + 1;
+                const delay = Math.min(i * 0.03, 0.4);
+                return `<button class="lecture-card ${origIndex === currentLectureIndex ? 'active-lecture' : ''}"
+                    role="listitem"
+                    style="animation-delay: ${delay}s;"
+                    onclick="openVideo(${origIndex})"
+                    aria-label="Play: ${lec.title.replace(/"/g, '&quot;')}">
+                    <div class="lecture-left">
+                        <div class="lecture-num" aria-hidden="true">${num}</div>
+                        <span class="lecture-title">${lec.title}</span>
+                    </div>
+                    <div class="play-btn" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    </div>
+                </button>`;
+            }).join('');
+        }
+
+        function setChapter(index) {
+            currentChapterIndex = index;
+            currentLectureIndex = -1;
+            document.getElementById('search-input').value = '';
+            searchQuery = '';
+            
+            // Toggle active classes
+            const buttons = document.querySelectorAll('.chapter-btn');
+            buttons.forEach((btn, i) => {
+                if (i === index) {
+                    btn.classList.add('active');
+                    btn.setAttribute('aria-selected', 'true');
+                    btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                } else {
+                    btn.classList.remove('active');
+                    btn.setAttribute('aria-selected', 'false');
+                }
+            });
+
+            updateIndicator();
+            renderGrid();
+        }
+
+        function openVideo(lectureIndex) {
+            currentLectureIndex = lectureIndex;
+            const lec = teacherData[currentChapterIndex].lectures[lectureIndex];
+            const modal = document.getElementById('video-modal');
+            const container = document.getElementById('video-container');
+            const loader = document.getElementById('video-loader');
+
+            document.getElementById('modal-title').textContent = lec.title;
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+
+            // Show loader
+            loader.style.display = 'flex';
+            container.querySelector('iframe, video')?.remove();
+
+            updateNavButtons();
+            renderGrid();
+
+            const total = teacherData[currentChapterIndex].lectures.length;
+            document.getElementById('nav-counter').textContent = `${lectureIndex + 1} / ${total}`;
+
+            if (lec.url.includes('youtube.com') || lec.url.includes('youtu.be')) {
+                const videoId = lec.url.includes('v=')
+                    ? lec.url.split('v=')[1].split('&')[0]
+                    : lec.url.split('/').pop().split('?')[0];
+                const embedUrl = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&iv_load_policy=3&color=white&playsinline=1`;
+                const iframe = document.createElement('iframe');
+                iframe.src = embedUrl;
+                iframe.width = '100%'; iframe.height = '100%';
+                iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+                iframe.setAttribute('allowfullscreen', '');
+                iframe.setAttribute('frameborder', '0');
+                iframe.onload = () => { loader.style.display = 'none'; };
+                container.appendChild(iframe);
+            } else {
+                // Native <video> — zero external branding
+                const video = document.createElement('video');
+                video.src = lec.url;
+                video.controls = true;
+                video.autoplay = true;
+                video.playsInline = true;
+                video.preload = 'metadata';
+                video.setAttribute('controlsList', 'nodownload');
+                video.style.cssText = 'width:100%;height:100%;display:block;background:#000;';
+                video.onloadeddata = () => { loader.style.display = 'none'; };
+                video.oncanplay = () => { loader.style.display = 'none'; };
+                video.onerror = () => {
+                    loader.innerHTML = `<p style="color:#ef4444;padding:1rem;text-align:center;">
+                        ⚠️ Could not load video.<br>The stream may be unavailable.
+                    </p>`;
+                };
+                // Auto-advance to next lecture when done
+                video.onended = () => {
+                    const total = teacherData[currentChapterIndex].lectures.length;
+                    if (currentLectureIndex < total - 1) navigateLecture(1);
+                };
+                container.appendChild(video);
+            }
+
+            modal.focus();
+        }
+
+        function updateNavButtons() {
+            const total = teacherData[currentChapterIndex].lectures.length;
+            document.getElementById('prev-btn').disabled = currentLectureIndex <= 0;
+            document.getElementById('next-btn').disabled = currentLectureIndex >= total - 1;
+        }
+
+        function navigateLecture(direction) {
+            const newIndex = currentLectureIndex + direction;
+            const total = teacherData[currentChapterIndex].lectures.length;
+            if (newIndex >= 0 && newIndex < total) openVideo(newIndex);
+        }
+
+        function closeVideo() {
+            const modal = document.getElementById('video-modal');
+            const container = document.getElementById('video-container');
+            modal.classList.remove('open');
+            document.body.style.overflow = '';
+            
+            // Stop media after close fade animation finishes
+            setTimeout(() => {
+                if (!modal.classList.contains('open')) {
+                    const iframe = container.querySelector('iframe');
+                    const video = container.querySelector('video');
+                    if (iframe) iframe.src = '';
+                    if (video) { video.pause(); video.src = ''; video.remove(); }
+                }
+            }, 350);
+            
+            currentLectureIndex = -1;
+            renderGrid();
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            const modal = document.getElementById('video-modal');
+            if (!modal.classList.contains('open')) return;
+            if (e.key === 'Escape') closeVideo();
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); navigateLecture(1); }
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); navigateLecture(-1); }
+        });
+
+        // Click backdrop to close
+        document.getElementById('video-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeVideo();
+        });
+
+        // Search
+        document.getElementById('search-input').addEventListener('input', function() {
+            searchQuery = this.value.trim();
+            renderGrid();
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderApp();
+            
+            const nav = document.getElementById('chapter-nav');
+            if (nav) {
+                nav.addEventListener('scroll', updateScrollIndicators);
+            }
+            window.addEventListener('resize', () => {
+                updateIndicator();
+                updateScrollIndicators();
+            });
+        });
+    </script>
+</body>
+</html>
